@@ -1,0 +1,45 @@
+@mixin forall{
+        margin: 0%;
+        padding: 0%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        line-height: 1.5;
+}
+@mixin bg{
+    background-image: linear-gradient($red,$mahroon);
+
+}
+@mixin size{
+    height:100px;
+    width: 100px;
+    margin: 20px;
+    border-radius: 30px;
+    margin-top: 13px;
+}
+@mixin button{
+    background-color: $red;
+    color: $white;
+    padding: 13px;
+    border: 1px solid $red;
+    border-radius: 15px;
+    &:hover{
+        background-color: $white;
+        color:$red;
+        cursor: pointer;
+        border: 3px solid $red;
+    }
+}
+@mixin text{
+    font-family: 'Poppins', sans-serif;
+    color: $mahroon;
+    text-transform: uppercase;
+    margin: 12px auto;
+
+}
+@mixin text-heading{
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px goldenrod ;
+    margin: auto 0;
+    margin-left: 2%;
+    text-transform: uppercase;
+}
