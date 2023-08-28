@@ -4,6 +4,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: normal;
         line-height: 1.5;
+       
 }
 @mixin bg{
     background-image: linear-gradient($red,$mahroon);
@@ -23,10 +24,12 @@
     border: 1px solid $red;
     border-radius: 15px;
     &:hover{
-        background-color: $white;
+        // background-image: linear-gradient(to left,#C5C5C5 ,#dcae96);
         color:$red;
+        background-color:#dcae96 ;
+        
         cursor: pointer;
-        border: 3px solid $red;
+        border: 3px solid transparent;
     }
 }
 @mixin text{
