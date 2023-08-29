@@ -7,29 +7,27 @@
        
 }
 @mixin bg{
-    background-image: linear-gradient($red,$mahroon);
+    background-image: linear-gradient(#2b6777,#52ab98);
 
 }
 @mixin size{
     height:100px;
     width: 100px;
     margin: 20px;
-    border-radius: 30px;
-    margin-top: 13px;
+    // border-radius: 30px;
+    // margin-top: 13px;
 }
 @mixin button{
-    background-color: $red;
+    background-color: #052129;
     color: $white;
     padding: 13px;
-    border: 1px solid $red;
+    border: 1px solid #052129;
     border-radius: 15px;
     &:hover{
-        // background-image: linear-gradient(to left,#C5C5C5 ,#dcae96);
-        color:$red;
-        background-color:#dcae96 ;
-        
-        cursor: pointer;
-        border: 3px solid transparent;
+        color:#052129;
+        background-color:#FFF;
+        // cursor: pointer;
+        border: 3px solid #052129;
     }
 }
 @mixin text{
@@ -40,8 +38,8 @@
 
 }
 @mixin text-heading{
-    color: whitesmoke;
-    text-shadow: 2px 2px 4px goldenrod ;
+    color: #052129;
+    text-shadow: 2px 2px 4px rgb(148, 147, 146) ;
     margin: auto 0;
     margin-left: 2%;
     text-transform: uppercase;

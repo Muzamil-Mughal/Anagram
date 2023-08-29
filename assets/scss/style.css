@@ -8,40 +8,38 @@
 }
 
 hr {
-  border: 2px solid maroon;
+  border: 2px solid #2B6777;
   border-radius: 10px;
 }
 
 body {
-  background-image: linear-gradient(to left, #C5C5C5, #dcae96);
+  background-image: linear-gradient(to left, #fffcfc, #8bada6);
 }
 
-.navbar {
-  background-image: linear-gradient(rgb(194, 16, 16), rgb(90, 4, 4));
+.header {
+  background-image: linear-gradient(#2b6777, #52ab98);
   display: flex;
   height: 20vh;
   position: sticky;
   flex-direction: row;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-.navbar span {
+.header span {
   display: flex;
   margin-left: 28% !important;
 }
-.navbar .title {
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px goldenrod;
+.header .title {
+  color: #052129;
+  text-shadow: 2px 2px 4px rgb(148, 147, 146);
   margin: auto 0;
   margin-left: 2%;
   text-transform: uppercase;
   font-size: xx-large;
 }
-.navbar .header-logo {
+.header .header-logo {
   height: 100px;
   width: 100px;
   margin: 20px;
-  border-radius: 30px;
-  margin-top: 13px;
 }
 
 .hero {
@@ -53,29 +51,41 @@ body {
   margin: 10px auto;
   padding: 5%;
   margin-bottom: 10%;
-  border: 2px rgb(90, 4, 4) solid;
+  border: 3px #01121f solid;
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to left, rgb(207, 57, 57), rgb(146, 146, 218));
+  background-image: linear-gradient(to right, rgb(175, 166, 166), rgb(91, 91, 206));
   border-radius: 20px;
 }
 .hero .anagram p {
   color: white;
+  font-size: large;
 }
 .hero .anagram h1 {
-  color: rgb(90, 4, 4);
-  text-shadow: 5px 5px 4px goldenrod;
+  color: #052129;
+  text-shadow: 5px 5px 4px rgb(90, 78, 78);
   align-items: center;
   margin-bottom: 10px;
 }
 .hero .anagram #find-btn {
+  background-color: #052129;
+  color: rgb(228, 220, 220);
+  padding: 13px;
+  border: 1px solid #052129;
+  border-radius: 15px;
   font-size: x-large;
-  padding: 9px 20px;
+  padding: 8px 20px;
+}
+.hero .anagram #find-btn:hover {
+  color: #052129;
+  background-color: #FFF;
+  border: 3px solid #052129;
 }
 .hero #input {
   border-radius: 15px;
+  margin-top: 10px;
   padding: 15px;
   background-color: transparent;
-  border: 2px solid rgb(90, 4, 4);
+  border: 2px #052129 solid;
 }
 .hero #input::-moz-placeholder {
   color: White;
@@ -90,20 +100,9 @@ body {
 .hero #input:focus {
   border-color: dodgerblue;
   box-shadow: 0 0 5px dodgerblue;
-  color: greenyellow;
-}
-.hero button {
-  background-color: rgb(194, 16, 16);
-  color: rgb(228, 220, 220);
-  padding: 13px;
-  border: 1px solid rgb(194, 16, 16);
-  border-radius: 15px;
-}
-.hero button:hover {
-  color: rgb(194, 16, 16);
-  background-color: #dcae96;
-  cursor: pointer;
-  border: 3px solid transparent;
+  color: whitesmoke;
+  font-size: medium;
+  font-weight: 600;
 }
 .hero .text {
   font-family: "Poppins", sans-serif;
@@ -112,8 +111,8 @@ body {
   margin: 12px auto;
 }
 .hero .description h1 {
-  color: rgb(90, 4, 4);
-  margin: auto 0;
+  color: #01121f;
+  margin: 10px 0;
   text-transform: uppercase;
   padding-top: 40px;
 }
@@ -127,18 +126,37 @@ body {
   margin-right: 7px;
   font-size: large;
 }
+.hero .feedback h1 {
+  color: #01121f;
+  margin-block: 15px;
+}
 .hero form textarea {
   padding: 20px;
   border-radius: 20px;
-  border: 1px rgb(90, 4, 4) solid;
+  border: 1px green solid;
+  opacity: 0.6;
+  height: 150px;
+  width: 60%;
+}
+.hero form button {
+  background-color: #052129;
+  color: rgb(228, 220, 220);
+  padding: 13px;
+  border: 1px solid #052129;
+  border-radius: 15px;
+}
+.hero form button:hover {
+  color: #052129;
+  background-color: #FFF;
+  border: 3px solid #052129;
 }
 
 .footer {
-  background-image: linear-gradient(rgb(194, 16, 16), rgb(90, 4, 4));
+  background-image: linear-gradient(#2b6777, #52ab98);
 }
 .footer h1 {
-  color: whitesmoke;
-  text-shadow: 2px 2px 4px goldenrod;
+  color: #052129;
+  text-shadow: 2px 2px 4px rgb(148, 147, 146);
   margin: auto 0;
   margin-left: 2%;
   text-transform: uppercase;
@@ -157,7 +175,8 @@ body {
 .footer .grid-container {
   display: flex;
   align-items: center;
-  padding: 5%;
+  padding-inline: 5%;
+  padding-block: 2%;
   justify-content: space-between;
 }
 .footer .grid-container .grid-item {
@@ -179,6 +198,11 @@ body {
   color: rgb(228, 220, 220);
   padding: 7px 0;
 }
+.footer .grid-container .footer-logo {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
 .footer .footer_contact div {
   display: flex;
   flex-direction: row;
@@ -195,4 +219,77 @@ body {
   margin: 2%;
   color: rgb(228, 220, 220);
   text-decoration: none;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  .header .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .header span {
+    margin-left: 0 !important;
+  }
+  .hero {
+    margin: 0%;
+    padding: 15px;
+  }
+  .hero .anagram #input {
+    margin-block-start: 12px;
+  }
+  .hero .anagram #find-btn {
+    display: flex;
+    width: 100%;
+    margin-block-start: 10px;
+  }
+  .hero .anagram #find-btn i {
+    margin: 0 auto;
+  }
+  .hero .anagram form textarea {
+    display: flex;
+    width: 100px;
+    height: 50px;
+  }
+  .footer .grid-container {
+    display: flex;
+    text-align: center;
+    justify-content: center !important;
+    padding: 10%;
+    flex-wrap: wrap;
+  }
+  .footer .grid-container .footer_contact div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer .grid-container .grid-item {
+    flex-basis: 100% !important;
+  }
+  .footer .grid-container #copyright {
+    font-size: xx-small;
+  }
+}
+/* For screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header span {
+    margin-left: 100px !important;
+  }
+  .header .hero {
+    margin: 0%;
+    padding: 10px;
+  }
+}
+/* For screens larger than 992px */
+@media (min-width: 992px) {
+  /* Add responsive styles here */
 }/*# sourceMappingURL=style.css.map */

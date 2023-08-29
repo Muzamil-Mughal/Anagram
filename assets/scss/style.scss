@@ -6,14 +6,14 @@
   @include forall;
 }
 hr{
-border: 2px solid maroon ;
+border: 2px solid #2B6777 ;
   border-radius: 10px;
 
 }
 body{
-  background-image: linear-gradient(to left,#C5C5C5 ,#dcae96)
+  background-image: linear-gradient(to left,#fffcfc , #8bada6)
 }
-.navbar {
+.header {
   @include bg;
   display: flex;
   height: 20vh;
@@ -37,97 +37,109 @@ body{
   flex-direction: column;
   margin: 100px;
   // padding: 50px;
-
-
-.anagram {
-  margin: 10px auto;
-  padding: 5%;
-  margin-bottom: 10%;
-  border: 2px $mahroon solid;
-  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to left, rgb(207, 57, 57), rgb(146, 146, 218));
-  border-radius: 20px;
-p{
-  color: white;
-}
-
-  h1 {
-    color: $mahroon;
-    text-shadow: 5px 5px 4px goldenrod;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  #find-btn{
-    font-size: x-large;
-    padding: 9px 20px;
-  }
   
-}
 
-#input {
-  border-radius: 15px;
-  // margin: 10px;
-  padding: 15px;
-  background-color: transparent;
-  border: 2px solid $mahroon;
-  &::placeholder{
-    color:White;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  &:focus{
-    border-color: dodgerblue;
-    box-shadow: 0 0 5px dodgerblue;
-    // background-color: aquamarine;
-    color: greenyellow;
-    // color: $white;
-  }
-  
-}
-
-button {
-  @include button;
-}
-
-.text {
-  @include text;
-}
-
-
-.description {
-  h1 {
-    color: $mahroon;
-    margin: auto 0;
-    text-transform: uppercase;
-    padding-top: 40px;
+  .anagram {
+    margin: 10px auto;
+    padding: 5%;
+    margin-bottom: 10%;
+    border: 3px #01121f  solid;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to right, rgb(175, 166, 166), rgb(91, 91, 206));
+    border-radius: 20px;
+  p{
+    color: white;
+    font-size: large;
   }
 
-  p {
-    margin: 20px 0;
-    font-size: larger;
-    text-align: justify;
-  }
-  .examples{
-    .eg{
-      font-weight: 700;
-      margin-right: 7px;
-      font-size: large;
+    h1 {
+      color: #052129;
+      text-shadow: 5px 5px 4px rgb(90, 78, 78);
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    #find-btn{
+      @include button;
+      font-size: x-large;
+      padding: 8px 20px;
+     
     }
   }
-}
 
-form {
-  textarea {
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px $mahroon solid;
+  #input {
+    border-radius: 15px;
+    margin-top: 10px;
+    // margin: 10px;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px  #052129 solid ;
+    &::placeholder{
+      color:White;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &:focus{
+      border-color: dodgerblue;
+      box-shadow: 0 0 5px dodgerblue;
+      color: whitesmoke;
+      font-size: medium;
+      font-weight: 600;
+
+    }
+    
   }
-}
+
+  .text {
+    @include text;
+  }
+
+
+  .description {
+    h1 {
+      color: #01121f ;
+      margin: 10px 0;
+      text-transform: uppercase;
+      padding-top: 40px;
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: larger;
+      text-align: justify;
+    }
+    .examples{
+      .eg{
+        font-weight: 700;
+        margin-right: 7px;
+        font-size: large;
+      }
+    }
+  }
+  .feedback{
+    h1{
+      color:#01121f;
+      margin-block: 15px;
+    }
+  }
+
+
+  form {
+    textarea {
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px green solid;
+      opacity: 0.6;
+      height: 150px;
+      width: 60%;
+    }
+    button{
+      @include button;
+    }
+  }
 }
 .footer {
   @include bg;
   // display: flex;
-
   h1 {
     @include text-heading;
     font-size: larger;
@@ -146,7 +158,8 @@ form {
   .grid-container {
     display: flex;
     align-items: center;
-    padding: 5%;
+   padding-inline: 5%;
+   padding-block: 2%;
     justify-content: space-between;
 
     .grid-item {
@@ -172,7 +185,9 @@ form {
         padding: 7px 0;
       }
     }
-
+    .footer-logo{
+      @include size;
+    }
   }
   .footer_contact{
     div{
@@ -195,4 +210,89 @@ form {
   }
 
 }
+}
+
+// ---------------------Responsive
+ /* For screens smaller than 768px */
+@media (max-width: 767px) {
+.header{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  .header-logo{
+    width: 50px;
+    height: 50px;
+    }
+    span{
+      margin-left: 0 !important;
+    }
+}
+.hero{
+  margin:0%;
+  padding: 15px;
+  .anagram{
+    #input{
+      margin-block-start: 12px;
+    }
+    #find-btn{
+      display: flex;
+      width: 100%;
+      margin-block-start: 10px;
+      i{
+        margin: 0 auto;
+      }
+    }
+    form{
+      textarea{
+        display: flex;
+        width: 100px;
+        height: 50px;
+      }
+
+    }
+  }
+  
+}
+.footer{
+  .grid-container {
+    display: flex;
+    // align-items: center;
+    text-align: center;
+    justify-content: center !important;
+    padding: 10%;
+    flex-wrap: wrap;
+    .footer_contact{
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+    }
+    .grid-item {
+      // flex:1;
+      flex-basis: 100% !important;
+    }
+    #copyright{
+      font-size: xx-small;
+    }
+  }
+}
+}
+/* For screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+.header{
+  height: fit-content;
+  span{
+    margin-left: 100px !important;
+  }
+  .hero{
+    margin: 0%;
+    padding: 10px;
+  }
+}
+}
+/* For screens larger than 992px */
+@media (min-width: 992px) {
+  /* Add responsive styles here */
 }
