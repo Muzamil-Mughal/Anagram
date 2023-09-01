@@ -19,27 +19,28 @@ body {
 .header {
   background-image: linear-gradient(#2b6777, #52ab98);
   display: flex;
-  height: 20vh;
+  max-height: 20vh;
   position: sticky;
   flex-direction: row;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .header span {
   display: flex;
-  margin-left: 28% !important;
+  justify-content: space-around;
 }
 .header .title {
   color: #052129;
-  text-shadow: 2px 2px 4px rgb(148, 147, 146);
-  margin: auto 0;
-  margin-left: 2%;
+  text-shadow: 2px 9px 8px rgb(48, 51, 51);
+  margin-left: 25%;
   text-transform: uppercase;
   font-size: xx-large;
+  margin-block: auto;
 }
 .header .header-logo {
-  height: 100px;
-  width: 100px;
-  margin: 20px;
+  max-height: 100px;
+  max-width: 100px;
+  margin-inline-start: 10px;
+  padding: 10px;
 }
 
 .hero {
@@ -66,24 +67,16 @@ body {
   align-items: center;
   margin-bottom: 10px;
 }
-.hero .anagram #find-btn {
-  background-color: #052129;
-  color: rgb(228, 220, 220);
-  padding: 13px;
-  border: 1px solid #052129;
+.hero .anagram .generate {
+  background-color: #01121f;
+  color: #fffcfc;
+  padding: 12px;
   border-radius: 15px;
-  font-size: x-large;
-  padding: 8px 20px;
-}
-.hero .anagram #find-btn:hover {
-  color: #052129;
-  background-color: #FFF;
-  border: 3px solid #052129;
 }
 .hero #input {
   border-radius: 15px;
   margin-top: 10px;
-  padding: 15px;
+  padding: 13px;
   background-color: transparent;
   border: 2px #052129 solid;
 }
@@ -97,18 +90,9 @@ body {
   font-weight: 600;
   text-transform: uppercase;
 }
-.hero #input:focus {
-  border-color: dodgerblue;
-  box-shadow: 0 0 5px dodgerblue;
-  color: whitesmoke;
-  font-size: medium;
-  font-weight: 600;
-}
 .hero .text {
   font-family: "Poppins", sans-serif;
-  color: rgb(90, 4, 4);
   text-transform: uppercase;
-  margin: 12px auto;
 }
 .hero .description h1 {
   color: #01121f;
@@ -136,19 +120,14 @@ body {
   border: 1px green solid;
   opacity: 0.6;
   height: 150px;
-  width: 60%;
+  min-width: 60%;
 }
 .hero form button {
   background-color: #052129;
   color: rgb(228, 220, 220);
-  padding: 13px;
   border: 1px solid #052129;
   border-radius: 15px;
-}
-.hero form button:hover {
-  color: #052129;
-  background-color: #FFF;
-  border: 3px solid #052129;
+  padding: 10px;
 }
 
 .footer {
@@ -156,9 +135,8 @@ body {
 }
 .footer h1 {
   color: #052129;
-  text-shadow: 2px 2px 4px rgb(148, 147, 146);
-  margin: auto 0;
-  margin-left: 2%;
+  text-shadow: 2px 9px 8px rgb(48, 51, 51);
+  margin-left: 25%;
   text-transform: uppercase;
   font-size: larger;
 }
@@ -187,6 +165,7 @@ body {
 }
 .footer .grid-container .grid-item h1 {
   margin-bottom: 10px;
+  margin: 0 !important;
   text-shadow: none;
   font-weight: 700;
 }
@@ -199,9 +178,10 @@ body {
   padding: 7px 0;
 }
 .footer .grid-container .footer-logo {
-  height: 100px;
-  width: 100px;
-  margin: 20px;
+  max-height: 100px;
+  max-width: 100px;
+  margin-inline-start: 10px;
+  padding: 10px;
 }
 .footer .footer_contact div {
   display: flex;
@@ -215,7 +195,6 @@ body {
   line-height: normal;
 }
 .footer .tools a {
-  padding: 4%;
   margin: 2%;
   color: rgb(228, 220, 220);
   text-decoration: none;
@@ -226,34 +205,37 @@ body {
   .header {
     display: flex;
     flex-direction: row;
-    height: auto;
+    max-height: 10%;
   }
   .header .header-logo {
-    width: 50px;
-    height: 50px;
+    max-width: 60px;
+    max-height: 60px;
+    margin: 0 !important;
   }
-  .header span {
-    margin-left: 0 !important;
+  .header .title {
+    margin-inline: auto;
   }
   .hero {
     margin: 0%;
     padding: 15px;
   }
+  .hero .anagram {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
   .hero .anagram #input {
     margin-block-start: 12px;
+    width: 90%;
   }
   .hero .anagram #find-btn {
     display: flex;
-    width: 100%;
     margin-block-start: 10px;
-  }
-  .hero .anagram #find-btn i {
-    margin: 0 auto;
+    justify-content: center;
+    min-width: 100%;
   }
   .hero .anagram form textarea {
-    display: flex;
-    width: 100px;
-    height: 50px;
+    min-width: 60%;
   }
   .footer .grid-container {
     display: flex;
@@ -275,21 +257,80 @@ body {
     font-size: xx-small;
   }
 }
-/* For screens between 768px and 992px */
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
-    height: -moz-fit-content;
-    height: fit-content;
+    max-height: 20%;
+  }
+  .header img {
+    margin: 0;
   }
   .header span {
-    margin-left: 100px !important;
+    margin-left: 21% !important;
   }
-  .header .hero {
+  .hero {
     margin: 0%;
     padding: 10px;
   }
+  .hero form textarea {
+    min-width: 60%;
+  }
 }
-/* For screens larger than 992px */
-@media (min-width: 992px) {
-  /* Add responsive styles here */
+@media (min-width: 992px) and (max-width: 1199) {
+  .header {
+    height: 2%;
+    display: flex;
+    margin-top: 0%;
+  }
+  .hero .anagram {
+    width: 70%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: xx-large;
+    padding: 3% 0%;
+  }
+  .hero .anagram h1 {
+    font-size: 40px;
+  }
+  .hero .anagram p {
+    font-size: x-large;
+  }
+  .hero .anagram div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .hero .anagram div span {
+    margin-left: 10px;
+    padding: 10px;
+    padding-top: 5px;
+  }
+  .hero .anagram div #input {
+    width: 330px;
+  }
+  .hero form textarea {
+    min-width: 60% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    height: 12vh;
+  }
+  .header .title {
+    font-size: 45px;
+    margin-left: 28%;
+  }
+  .hero .anagram {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero form textarea {
+    min-width: 60%;
+  }
 }/*# sourceMappingURL=style.css.map */

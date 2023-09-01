@@ -11,36 +11,31 @@
 
 }
 @mixin size{
-    height:100px;
-    width: 100px;
-    margin: 20px;
+    max-height:100px;
+    max-width: 100px;
+    // margin: 1.25%;
+    margin-inline-start: 10px;
+    padding: 10px;
     // border-radius: 30px;
     // margin-top: 13px;
 }
 @mixin button{
     background-color: #052129;
     color: $white;
-    padding: 13px;
+    // padding: 13px;
     border: 1px solid #052129;
     border-radius: 15px;
-    &:hover{
-        color:#052129;
-        background-color:#FFF;
-        // cursor: pointer;
-        border: 3px solid #052129;
-    }
 }
 @mixin text{
     font-family: 'Poppins', sans-serif;
-    color: $mahroon;
     text-transform: uppercase;
-    margin: 12px auto;
+    // margin: 12px auto;
 
 }
 @mixin text-heading{
     color: #052129;
-    text-shadow: 2px 2px 4px rgb(148, 147, 146) ;
-    margin: auto 0;
-    margin-left: 2%;
+    text-shadow: 2px 9px 8px rgb(48, 51, 51) ;
+    // margin: auto 0;
+    margin-left: 25%;
     text-transform: uppercase;
 }

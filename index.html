@@ -1,179 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Anagram Solver" />
-    <meta property="og:site_name" content="Anagram Solver" />
-    <meta property="og:url" content=https://anagram-solver.co.uk/>
-    <meta
-      property="og:description"
-      content="Anagram Solver is a word rearrange. Which rearranges the alphabets of given words and come up with all meaningful words in english dictionary."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
-    <title>Anagram Solver</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- icons -->
-    <!-- <link rel="stylesheet" href="./assets/fontawesome/all.min.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Anagram Solver" />
+  <meta property="og:site_name" content="Anagram Solver" />
+  <meta property="og:url" content=https://anagram-solver.co.uk />
+  <meta property="og:description"
+    content="Anagram Solver is a word rearrange. Which rearranges the alphabets of given words and come up with all meaningful words in english dictionary." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <title>Anagram Solver</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- icons -->
+  <!-- <link rel="stylesheet" href="./assets/fontawesome/all.min.css">
     <link rel="stylesheet" href="./assets/fontawesome/fontawesome.min.css"> -->
-    <!-- custom styling -->
-    <link rel="stylesheet" href="./assets/scss/style.css" />
-  </head>
-  <body>
-    <!-------------------- header section -->
-    <div class="header">
-      <img src="./assets/images/AS-logo-2.png" alt="logo" class="header-logo"/>
-      <span class="title"> ANAGRAM SOLVER</span>
-    </div>
-    <!-------------------- hero section -->
-    <div class="hero">
-      <div class="anagram">
-        <h1>Anagram Solver</h1>
-        <p>Unlocking Letters, Revealing Worlds!</p>
-        <div>
-          <input class="input" type="text" id="input" placeholder="Enter a word" />
-          <button id="find-btn">
-            <i
-              class="fa-brands fa-searchengin"
-            ></i>
+  <!-- custom styling -->
+  <link rel="stylesheet" href="./assets/scss/style.css" />
+</head>
+
+<body>
+  <!-------------------- header section -->
+  <div class="header">
+    <img src="./assets/images/AS-logo-2.png" alt="logo" class="header-logo" />
+    <span class="title"> ANAGRAM SOLVER</span>
+  </div>
+  <!-------------------- hero section -->
+  <div class="hero">
+    <div class="anagram">
+      <h1>Anagram Solver</h1>
+      <p>Unlocking Letters, Revealing Worlds!</p>
+      <div>
+        <input class="input" type="text" id="input" placeholder="Enter a word" />
+        <button id="find-btn" class="generate">
+           Generate
           </button>
+          <!-- <button class="generate" >Generate</button> -->
           <br />
-        </div>
-        <h4 id="anagrams"></h4>
       </div>
-      <hr />
-      <div class="description">
-        <h1>Description</h1>
-       
-        <p>
-          Our ANAGRAM SOLVER, a true linguistic enchanter, possesses the
-          remarkable ability to unveil hidden wonders residing within words and
-          phrases. Its computational finesse is akin to a virtuoso performance,
-          meticulously untangling the intricate tapestry of jumbled letters to
-          reveal a symphony of limitless possibilities. In the realm of
-          linguistic puzzles and verbal wizardry, an anagram solver emerges as
-          an invaluable and indispensable companion, seamlessly rearranging
-          letters to breathe life into novel expressions and unveil uncharted
-          dimensions of language. <br> <br> Whether you find yourself deciphering cryptic
-          codes, stoking the fires of creative ingenuity, or simply luxuriating
-          in the pure thrill of linguistic unraveling, an anagram solver stands
-          as a profound testament to the harmonious interplay of cutting-edge
-          technology and the written word. It celebrates the marvels of
-          reshaping communication, casting a radiant spotlight on the
-          astonishing connections and permutations that words can forge, all
-          while inviting us to explore the artistry of language manipulation in
-          the digital age. <br> <br>
-            <h1>EXAMPLES</h1>
-        <br>  
-          <span class="examples">
-            <span class="eg">Original:</span> "astronomer"<br>
-            <span class="eg">Anagram::</span>"moonstarer" <br>
-            <br><span class="eg">Original:</span> "restful"<br>
-            <span class="eg">Anagram::</span>"fluster"<br>
-            <br> <span class="eg">Original:</span> "listen"<br>
-            <span class="eg">Anagram::</span>"silent"<br><br>
-          </span>
-          <p> These examples showcase how an anagram solver can unveil playful wordplay, unexpected connections, and clever transformations that breathe new life into familiar language constructs.
-        </p>
-      </div>
-      <hr />
-      <div class="feedback">
-        <h1 class="text">We'd love to hear from your side</h1>
-        <form action="post">
-          <textarea
-            name="feedback"
-            id="feedback"
-            placeholder="Write Us."
-          ></textarea>
+      <h4 id="anagrams"></h4>
+    </div>
+    <hr />
+    <div class="description">
+      <h1>Description</h1>
+
+      <p>
+        Our ANAGRAM SOLVER, a true linguistic enchanter, possesses the
+        remarkable ability to unveil hidden wonders residing within words and
+        phrases. Its computational finesse is akin to a virtuoso performance,
+        meticulously untangling the intricate tapestry of jumbled letters to
+        reveal a symphony of limitless possibilities. In the realm of
+        linguistic puzzles and verbal wizardry, an anagram solver emerges as
+        an invaluable and indispensable companion, seamlessly rearranging
+        letters to breathe life into novel expressions and unveil uncharted
+        dimensions of language. <br> <br> Whether you find yourself deciphering cryptic
+        codes, stoking the fires of creative ingenuity, or simply luxuriating
+        in the pure thrill of linguistic unraveling, an anagram solver stands
+        as a profound testament to the harmonious interplay of cutting-edge
+        technology and the written word. It celebrates the marvels of
+        reshaping communication, casting a radiant spotlight on the
+        astonishing connections and permutations that words can forge, all
+        while inviting us to explore the artistry of language manipulation in
+        the digital age. <br> <br>
+      <h1>EXAMPLES</h1>
+      <br>
+      <span class="examples">
+        <span class="eg">Original:</span> "astronomer"<br>
+        <span class="eg">Anagram::</span>"moonstarer" <br>
+        <br><span class="eg">Original:</span> "restful"<br>
+        <span class="eg">Anagram::</span>"fluster"<br>
+        <br> <span class="eg">Original:</span> "listen"<br>
+        <span class="eg">Anagram::</span>"silent"<br><br>
+      </span>
+      <p> These examples showcase how an anagram solver can unveil playful wordplay, unexpected connections, and clever
+        transformations that breathe new life into familiar language constructs.
+      </p>
+    </div>
+    <hr />
+    <div class="feedback">
+      <h1 class="text">We'd love to hear from your side</h1>
+      <form action="post">
+        <textarea name="feedback" id="feedback" placeholder="Write Us."></textarea>
         <br>
         <button>Send Feedback</button>
       </form>
-      </div>
     </div>
-    <!-- footer -->
-    <div class="footer">
-      <div class="grid-container">
-        <div class="grid-item">
-          <img class="footer-logo" src="./assets/images/AS-logo-2.png" alt="logo">
-          <h1>CONTACT US</h1>
-          <div class="footer_contact">
-            <div><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> <p>info@cubixsol.com</p></div> 
-            <div><i class="fa-solid fa-phone" style="color: #ffffff;"></i> <p>+92 304 110 0028</p></div>
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img class="footer-logo" src="./assets/images/AS-logo-2.png" alt="logo">
+        <h1>CONTACT US</h1>
+        <div class="footer_contact">
+          <div><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+            <p>info@cubixsol.com</p>
+          </div>
+          <div><i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+            <p>+92 304 110 0028</p>
           </div>
         </div>
-        <div class="grid-item">
-          <h1>More Tools</h1>
-          <ul class="tools">
-            <li><a href="#"> lorem</a></li>
-            <li><a href="#"> lorem</a></li>
-            <li><a href="#"> lorem</a></li>
-            <li><a href="#"> lorem</a></li>
-          </ul>
-        </div>
-        <div class="grid-item">
-          <h1>About US</h1>
-          <ul class="tools">
-            <li><a href="#"> Contact</a></li>
-            <li><a href="#"> Privacy</a></li>
-            <li><a href="#"> Terms</a></li>
-            <li><a href="#"> FAQ</a></li>
-          </ul>
-        </div>
-       </div> 
-       <hr>
-       <span id="copyright">Copyright © 2020 - 2023 by CubixSol.com All Rights Reserved.</span>
+      </div>
+      <div class="grid-item">
+        <h1>More Tools</h1>
+        <ul class="tools">
+          <li><a href="#"> lorem</a></li>
+          <li><a href="#"> lorem</a></li>
+          <li><a href="#"> lorem</a></li>
+          <li><a href="#"> lorem</a></li>
+        </ul>
+      </div>
+      <div class="grid-item">
+        <h1>About US</h1>
+        <ul class="tools">
+          <li><a href="#"> Contact</a></li>
+          <li><a href="#"> Privacy</a></li>
+          <li><a href="#"> Terms</a></li>
+          <li><a href="#"> FAQ</a></li>
+        </ul>
       </div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      style = "font-size: x-large; color: whitesmoke";
-      $(document).ready(function () {
-        // Load the list of English words
+    <hr>
+    <span id="copyright">Copyright © 2020 - 2023 by CubixSol.com All Rights Reserved.</span>
+  </div>
+  </div>
 
-        $.get("words.txt", function (data) {
-          var englishWords = data.split("\n");
-          var wordMap = {};
+  <!-- jquery part  -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+    style = "font-size: x-large; color: whitesmoke";
+    $(document).ready(function () {
+      // Load the list of English words
 
-          // Create a map of sorted letters to words
-          for (var i = 0; i < englishWords.length; i++) {
-            var word = englishWords[i].toLowerCase().replace(/\r$/, "");
-            var sortedLetters = word.split("").sort().join("");
-            if (!wordMap[sortedLetters]) {
-              wordMap[sortedLetters] = [];
-            }
-            wordMap[sortedLetters].push(word);
+      $.get("words.txt", function (data) {
+        var englishWords = data.split("\n");
+        var wordMap = {};
+
+        // Create a map of sorted letters to words
+        for (var i = 0; i < englishWords.length; i++) {
+          var word = englishWords[i].toLowerCase().replace(/\r$/, "");
+          var sortedLetters = word.split("").sort().join("");
+          if (!wordMap[sortedLetters]) {
+            wordMap[sortedLetters] = [];
           }
+          wordMap[sortedLetters].push(word);
+        }
 
-          $("#find-btn").click(() => {
-            var input = $("#input").val().toLowerCase();
-            var sortedInput = input.split("").sort().join("");
-            var anagrams = wordMap[sortedInput] || [];
+        $("#find-btn").click(() => {
+          var input = $("#input").val().toLowerCase();
+          var sortedInput = input.split("").sort().join("");
+          var anagrams = wordMap[sortedInput] || [];
 
-            // Display the list of anagrams
-            var $anagramsList = $("#anagrams");
-            $anagramsList.empty();
-            if (anagrams.length === 0) {
-              $anagramsList.append("<h1>No anagrams found</h1>");
-            } else {
-              for (var j = 0; j < anagrams.length; j++) {
-                $anagramsList.append("<h4>" + anagrams[j] + "</h4>");
-              }
+          // Display the list of anagrams
+          var $anagramsList = $("#anagrams");
+          $anagramsList.empty();
+          if (anagrams.length === 0) {
+            $anagramsList.append("<h1>No anagrams found</h1>");
+          } else {
+            for (var j = 0; j < anagrams.length; j++) {
+              $anagramsList.append("<h4>" + anagrams[j] + "</h4>");
             }
-          });
+          }
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
